@@ -31,11 +31,15 @@ body {
 }
 
 .unavailable{
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 a {
     color: darkseagreen;
+}
+
+a:hover {
+    color: greenyellow;
 }
 
 p {
