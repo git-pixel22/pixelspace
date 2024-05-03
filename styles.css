@@ -12,6 +12,16 @@ body {
     background-attachment: fixed
 }
 
+.clouds{
+
+    opacity: 0.7;
+    width: 100%;
+    height: 362px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
 @keyframes moveSlideShow {
     100%{
         transform: translateX(-20%)
@@ -23,16 +33,6 @@ body {
     width: 40px;
     margin-bottom: 30px;
     animation: tilt 2s infinite;
-}
-
-.clouds{
-
-    opacity: 0.7;
-    width: 100%;
-    height: 362px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 70px;
 }
   
 .clouds > div {
@@ -48,11 +48,17 @@ body {
       animation: moveSlideShow 15s linear infinite;
 }
   
+@keyframes moveCharizard {
+    0% { right: 0px; }
+    100% { right: calc(100% + 50px); }
+}
+
 #charizard {
-      position: absolute;
-      top: 50px; /* Adjust as needed */
-      right: 100px; /* Adjust as needed */
-      width:250px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 250px;
+    animation: moveCharizard 20s linear infinite;
 }
 
 a {
