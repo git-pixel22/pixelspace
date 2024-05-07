@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('../font/slkscr.ttf') format('truetype');
+}
+
+body {
+    background: url(../images/nightsky.gif);
+    color: #ffffff;
+    font-family: 'Silkscreen', sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+a {
+    text-decoration: none;
+    color: darkseagreen;
+    opacity: 0.7;
+}
+
+a:hover {
+    color: springgreen;
+    opacity: 1;
+}
+
+.link-with-image {
+    position: relative;
+    display: inline-block; /* Makes the link container the size of the image */
+}
+
+.link-with-image img {
+    width: 100%; /* Adjust the width as needed */
+    display: block; /* Removes bottom margin/padding */
+}
+
+.link-with-image span {
+    position: absolute;
+    top: 59%; /* Center vertically */
+    left: 43%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the span position to truly center it */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold; /* Optional: adds boldness to the text */
+    text-align: center;
+}
+
+p {
+    line-height: 1.5em;
+    font-size: larger;
+    color: blanchedalmond;
+    margin-left: 60px;
+    margin-top: 60px;
+}
