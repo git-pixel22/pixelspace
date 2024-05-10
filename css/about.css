@@ -15,7 +15,7 @@ body {
     color: springgreen;
 }
 
-#about{
+#about {
     padding: 3rem;
     line-height: 1.5rem;
 }
@@ -34,6 +34,7 @@ body {
 
 figure.snip1200 {
     font-family: 'Raleway', Arial, sans-serif;
+    font-weight: bold;
     position: relative;
     overflow: hidden;
     margin: 10px;
@@ -47,19 +48,22 @@ figure.snip1200 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     font-size: 16px;
     cursor: pointer;
-  }
-  figure.snip1200 * {
+}
+
+figure.snip1200 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all 0.45s ease-in-out;
-    transition: all 0.45s ease-in-out;
-  }
-  figure.snip1200 img {
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+}
+
+figure.snip1200 img {
     max-width: 100%;
     position: relative;
     opacity: 0.9;
-  }
-  figure.snip1200 figcaption {
+}
+
+figure.snip1200 figcaption {
     position: absolute;
     top: 45%;
     left: 7%;
@@ -67,16 +71,18 @@ figure.snip1200 {
     bottom: 45%;
     border: 1px solid white;
     border-width: 1px 1px 0;
-  }
-  figure.snip1200 .heading {
+}
+
+figure.snip1200 .heading {
     overflow: hidden;
     -webkit-transform: translateY(50%);
     transform: translateY(50%);
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
-  figure.snip1200 h2 {
+}
+
+figure.snip1200 h2 {
     display: table;
     margin: 0 auto;
     padding: 0 10px;
@@ -85,12 +91,14 @@ figure.snip1200 {
     width: auto;
     text-transform: uppercase;
     font-weight: 400;
-  }
-  figure.snip1200 h2 span {
+}
+
+figure.snip1200 h2 span {
     font-weight: 800;
-  }
-  figure.snip1200 h2:before,
-  figure.snip1200 h2:after {
+}
+
+figure.snip1200 h2:before,
+figure.snip1200 h2:after {
     position: absolute;
     display: block;
     width: 1000%;
@@ -98,14 +106,17 @@ figure.snip1200 {
     content: '';
     background: white;
     top: 50%;
-  }
-  figure.snip1200 h2:before {
+}
+
+figure.snip1200 h2:before {
     left: -1000%;
-  }
-  figure.snip1200 h2:after {
+}
+
+figure.snip1200 h2:after {
     right: -1000%;
-  }
-  figure.snip1200 p {
+}
+
+figure.snip1200 p {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -116,32 +127,36 @@ figure.snip1200 {
     opacity: 0;
     line-height: 1.6em;
     font-size: 0.9em;
-  }
-  figure.snip1200 a {
+}
+
+figure.snip1200 a {
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     position: absolute;
     z-index: 1;
-  }
-  figure.snip1200:hover img,
-  figure.snip1200.hover img {
+}
+
+figure.snip1200:hover img,
+figure.snip1200.hover img {
     opacity: 0.25;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  }
-  figure.snip1200:hover figcaption,
-  figure.snip1200.hover figcaption {
+}
+
+figure.snip1200:hover figcaption,
+figure.snip1200.hover figcaption {
     top: 7%;
     bottom: 7%;
-  }
-  figure.snip1200:hover p,
-  figure.snip1200.hover p {
+}
+
+figure.snip1200:hover p,
+figure.snip1200.hover p {
     opacity: 1;
     -webkit-transition-delay: 0.35s;
     transition-delay: 0.35s;
-  }
+}
 
 #personalities {
     display: flex; /* Use flexbox for horizontal alignment */
@@ -150,8 +165,30 @@ figure.snip1200 {
     padding: 3rem;
 }
 
-/* Optional: Adjust spacing between images */
-figure.snip1200 {
-    margin: 0 10px; /* Adjust as needed */
+@media (max-width: 768px) {
+    #personalities {
+        flex-direction: column; /* Stack the figures vertically */
+        align-items: center; /* Center-align the figures */
+    }
+
+    figure.snip1200 {
+        margin: 20px 0; /* Increase margin for vertical spacing */
+        width: 90%; /* Adjust width to be more responsive */
+        max-width: none; /* Override the maximum width setting */
+    }
+
+    figure.snip1200 figcaption {
+        top: initial; /* Remove specific positioning */
+        bottom: initial;
+        padding: 10px; /* Add padding to ensure text does not touch edges */
+    }
+
+    figure.snip1200 p {
+        font-size: 0.8em; /* Reduce font size */
+    }
+  
+    #about {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
 }
   
