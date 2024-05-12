@@ -13,11 +13,16 @@ body {
     background-color: #111111;
     font-family: 'Silkscreen', sans-serif;
     color: springgreen;
+    padding: 3rem;
 }
 
 #about {
-    padding: 3rem;
     line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.heading{
+    text-decoration: underline;
 }
 
 /* Blinker Animation */
@@ -162,7 +167,6 @@ figure.snip1200.hover p {
     display: flex; /* Use flexbox for horizontal alignment */
     justify-content: space-between; /* Space items evenly along the main axis */
     align-items: center; /* Center items vertically */
-    padding: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -191,4 +195,25 @@ figure.snip1200.hover p {
         padding: 1rem; /* Reduce padding on smaller screens */
     }
 }
-  
+
+.image-glitch {
+    animation: glitch 3.5s infinite steps(1);
+}
+
+@keyframes glitch {
+    0%, 100% {
+        content: url('../images/red.png');
+    }
+
+    92.5% {
+        content: url('../images/red-1.png');
+    }
+
+    95% {
+        content: url('../images/red-2.png');
+    }
+
+    97.5% {
+        content: url('../images/red-3.png');
+    }
+}
