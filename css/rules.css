@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 5rem;
+    background-color: #313131;
+    color: darkseagreen;
+}
+
+h1, h2 {
+    margin-bottom: 3rem;
+}
