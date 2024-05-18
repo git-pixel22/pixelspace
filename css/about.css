@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --card-bg-color: #000000;
+    --card-text-primary: #ffffff; /* set inside figure.snip1200 for each card separately */
+}
+
 body {
     background-color: #111111;
     font-family: 'Silkscreen', sans-serif;
@@ -18,6 +23,7 @@ body {
 
 p {
     margin-top: 2rem;
+    font-size: 1em;
 }
 
 #about {
@@ -26,164 +32,77 @@ p {
 
 .heading{
     text-decoration: underline;
-    margin-top: 3rem;
-}
-
-/* Blinker Animation */
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-#blinker {
-    animation: blink 1s infinite;
-    font-weight: bolder;
+    margin-block: 3rem;
 }
 
 figure.snip1200 {
-    font-family: 'Raleway', Arial, sans-serif;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-    min-width: 220px;
-    max-width: 210px;
-    max-height: 210px;
     width: 100%;
-    background: #000000;
-    color: #ffffff;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    font-size: 16px;
-    cursor: pointer;
-}
+    border: 1px solid white;
+    padding: 1em;
+    background-color: var(--card-text-primary);
 
-figure.snip1200 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.45s ease;
-    transition: all 0.45s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+figure.snip1200:nth-of-type(1) {
+    --card-text-primary: aqua;
+}
+figure.snip1200:nth-of-type(2) {
+    --card-text-primary: springgreen;
+}
+figure.snip1200:nth-of-type(3) {
+    --card-text-primary: red;
 }
 
 figure.snip1200 img {
-    max-width: 100%;
-    position: relative;
+    width: 100%;
+}
+
+figure.snip1200 ul.links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8em;
+    padding-block: 1em;
+}
+figure.snip1200 .link-item a {
+    color: var(--card-text-primary);
 }
 
 figure.snip1200 figcaption {
-    position: absolute;
-    top: 45%;
-    left: 7%;
-    right: 7%;
-    bottom: 45%;
+    padding: 0.5em 1.5em;
+    flex-grow: 1;
+}
+
+figure.snip1200 img,
+figure.snip1200 ul.links,
+figure.snip1200 figcaption {
+    background-color: var(--card-bg-color);
     border: 1px solid white;
-    border-width: 1px 1px 0;
-    font-size: 0.8em;
-}
-
-figure.snip1200 .heading {
-    overflow: hidden;
-    -webkit-transform: translateY(50%);
-    transform: translateY(50%);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-figure.snip1200 h2 {
-    display: table;
-    margin: 0 auto;
-    padding: 0 10px;
-    position: relative;
-    text-align: center;
-    width: auto;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-figure.snip1200 h2 span {
-    font-weight: 800;
-}
-
-figure.snip1200 h2:before,
-figure.snip1200 h2:after {
-    position: absolute;
-    display: block;
-    width: 1000%;
-    height: 1px;
-    content: '';
-    background: white;
-    top: 50%;
-}
-
-figure.snip1200 h2:before {
-    left: -1000%;
-}
-
-figure.snip1200 h2:after {
-    right: -1000%;
-}
-
-figure.snip1200 p {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: absolute;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0;
-    opacity: 0;
-    line-height: 1.6em;
-    font-size: 0.9em;
-}
-
-figure.snip1200 a {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 1;
-}
-
-figure.snip1200:hover img,
-figure.snip1200.hover img {
-    opacity: 0.25;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-figure.snip1200:hover figcaption,
-figure.snip1200.hover figcaption {
-    top: 7%;
-    bottom: 7%;
-}
-
-figure.snip1200:hover p,
-figure.snip1200.hover p {
-    opacity: 1;
-    -webkit-transition-delay: 0.35s;
-    transition-delay: 0.35s;
 }
 
 #personalities {
-    display: flex; /* Use flexbox for horizontal alignment */
-    justify-content: space-around; /* Space items evenly along the main axis */
-    align-items: center; /* Center items vertically */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4vw;
+    column-gap: 8vw;
 }
 
 @media (max-width: 768px) {
     #personalities {
-        flex-direction: column; /* Stack the figures vertically */
-        align-items: center; /* Center-align the figures */
+        /* flex-direction: column;
+        align-items: center; */
+        grid-template-columns: 1fr;
     }
 
     figure.snip1200 {
-        margin: 20px 0; /* Increase margin for vertical spacing */
-        width: 90%; /* Adjust width to be more responsive */
-        max-width: none; /* Override the maximum width setting */
-        max-height: max-content;
+        max-width: 310px;
+        margin-inline: auto;
     }
 
     figure.snip1200 figcaption {
@@ -192,12 +111,6 @@ figure.snip1200.hover p {
 
     figure.snip1200 p {
         font-size: 0.8em; /* Reduce font size */
-    }
-}
-
-@media (max-width: 414px) {
-    figure.snip1200 figcaption {
-        font-size: 0.8em;
     }
 }
 
