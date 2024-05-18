@@ -48,8 +48,8 @@ figure.snip1200 {
     overflow: hidden;
     margin: 10px;
     min-width: 220px;
-    max-width: 310px;
-    max-height: 310px;
+    max-width: 210px;
+    max-height: 210px;
     width: 100%;
     background: #000000;
     color: #ffffff;
@@ -69,7 +69,6 @@ figure.snip1200 * {
 figure.snip1200 img {
     max-width: 100%;
     position: relative;
-    opacity: 0.9;
 }
 
 figure.snip1200 figcaption {
@@ -80,6 +79,7 @@ figure.snip1200 figcaption {
     bottom: 45%;
     border: 1px solid white;
     border-width: 1px 1px 0;
+    font-size: 0.8em;
 }
 
 figure.snip1200 .heading {
@@ -169,7 +169,7 @@ figure.snip1200.hover p {
 
 #personalities {
     display: flex; /* Use flexbox for horizontal alignment */
-    justify-content: space-between; /* Space items evenly along the main axis */
+    justify-content: space-around; /* Space items evenly along the main axis */
     align-items: center; /* Center items vertically */
 }
 
@@ -183,20 +183,21 @@ figure.snip1200.hover p {
         margin: 20px 0; /* Increase margin for vertical spacing */
         width: 90%; /* Adjust width to be more responsive */
         max-width: none; /* Override the maximum width setting */
+        max-height: max-content;
     }
 
     figure.snip1200 figcaption {
-        top: initial; /* Remove specific positioning */
-        bottom: initial;
-        padding: 10px; /* Add padding to ensure text does not touch edges */
+        font-size: 1.2em;
     }
 
     figure.snip1200 p {
         font-size: 0.8em; /* Reduce font size */
     }
-  
-    #about {
-        padding: 1rem; /* Reduce padding on smaller screens */
+}
+
+@media (max-width: 414px) {
+    figure.snip1200 figcaption {
+        font-size: 0.8em;
     }
 }
 
@@ -220,9 +221,4 @@ figure.snip1200.hover p {
     97.5% {
         content: url('../images/red-3.png');
     }
-}
-
-footer{
-    padding: 1rem;
-    margin-top: 3rem;
 }

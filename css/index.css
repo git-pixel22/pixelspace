@@ -50,29 +50,50 @@ body {
     100% { right: calc(100% + 50px); }
 }
 
-#chatbox {
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     position: absolute;
-    left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+}
+
+#chatbox {
     width: 250px;
     height: 300px;
-    background-color: crimson;
     box-shadow: 0 0 10px 0 black;
     text-align: center;
-    margin-left: 10px;
+    flex-direction: column;
+}
+
+.chatbox-header {
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#chatbox iframe {
+    opacity: 0.9;
+}
+
+#chatbox iframe:hover {
+    opacity: 1;
 }
 
 #navbar {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 #navbar a {
