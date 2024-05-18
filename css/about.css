@@ -40,6 +40,8 @@ figure.snip1200 {
     border: 1px solid white;
     padding: 1em;
     background-color: var(--card-text-primary);
+    max-width: 350px;
+    margin-inline: auto;
 
     display: flex;
     flex-direction: column;
@@ -102,7 +104,6 @@ figure.snip1200 figcaption {
 
     figure.snip1200 {
         max-width: 310px;
-        margin-inline: auto;
     }
 
     figure.snip1200 figcaption {
