@@ -1,14 +1,50 @@
-* {
-    padding: 0;
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('../font/slkscr.ttf') format('truetype');
+}
+  
+  /* Reset default styles */
+  * {
     margin: 0;
-}
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-    padding: 5rem;
-    background-color: #313131;
-    color: darkseagreen;
-}
+  /* Set dark theme colors */
+  body {
+    background-color: #181818;
+    color: #ddd;
+    font-family: 'Courier', 'Silkscreen';
+    line-height: 1.6;
+    padding: 2rem;
+  }
 
-h1, h2 {
-    margin-bottom: 3rem;
-}
+  /* Style headings */
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  /* Style list items */
+  li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  /* Add bullet points */
+  li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #8bc34a;
+    font-weight: bold;
+  }
