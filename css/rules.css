@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'Silkscreen';
-    src: url('../font/slkscr.ttf') format('truetype');
-}
-  
-  /* Reset default styles */
+/* Reset default styles */
   * {
     margin: 0;
     padding: 0;
@@ -14,7 +9,7 @@
   body {
     background-color: #181818;
     color: #ddd;
-    font-family: 'Courier', 'Silkscreen';
+    font-family: 'Courier';
     line-height: 1.6;
     padding: 2rem;
   }
