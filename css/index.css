@@ -111,3 +111,16 @@ body {
     font-family: 'Silkscreen';
     src: url('../font/slkscr.ttf') format('truetype');
 }
+
+#navbar a.night-club:hover {
+    color: hotpink; /* Change the text color to pink */
+}
+
+#navbar a.night-club .emoji::before {
+    content: "🪩";
+}
+
+#navbar a.night-club:hover .emoji::before {
+    content: "🕺"; /* Change emoji on hover */
+}
+

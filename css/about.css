@@ -23,7 +23,7 @@ body {
 
 p {
     margin-top: 2rem;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 #about {
@@ -65,7 +65,7 @@ figure.snip1200 ul.links {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    font-size: 0.8em;
+    font-size: 1em;
     padding-block: 1em;
 }
 figure.snip1200 .link-item a {
